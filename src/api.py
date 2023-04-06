@@ -2,13 +2,14 @@ import uvicorn
 from fastapi import FastAPI
 
 import api_config
+from seniority_prediction import predict_seniority
 
 app = FastAPI()
 
 
 @app.post("/predict")
 def predict(title: str):
-    pred = title == 'vp'
+    pred = predict_seniority(title=title)
     resp = {"prediction": pred}
     return resp
 
