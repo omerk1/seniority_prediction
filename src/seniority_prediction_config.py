@@ -10,7 +10,7 @@ relevant_title_parts_per_management_level = {
 }
 
 # If title includes one of the substrings (per management level) we will mark it as "not in management level-
-# will be applied after the logic from above
+# will be applied after the logic from above.
 substrings_to_exclude_per_management_level = {
     'c_level': ['coordin', 'director', 'vice'],
     'vp_level': [],
