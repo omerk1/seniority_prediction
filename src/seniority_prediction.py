@@ -34,10 +34,10 @@ def get_title_parts_info(title):
         'manager_level': 0,
     }
 
-    for level, list_of_keywords in config.relevant_title_parts_per_management_level.items():
+    for level, list_of_keywords in relevant_title_parts_per_management_level.items():
         has_title_parts[level] = check_if_title_contains_keyword(title, list_of_keywords)
 
-    for level, substrings_to_exclude in config.substrings_to_exclude_per_management_level.items():
+    for level, substrings_to_exclude in substrings_to_exclude_per_management_level.items():
         for sub_s in substrings_to_exclude:
             if has_title_parts[level] == 1 and sub_s in title:
                 has_title_parts[level] = 0
