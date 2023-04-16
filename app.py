@@ -1,8 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
 
-import api_config
-from seniority_prediction import predict_seniority
+import src.app_config as config
+from src.seniority_prediction import predict_seniority
 
 app = FastAPI()
 
@@ -15,4 +15,4 @@ def predict(title: str):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host=api_config.HOST, port=int(api_config.PORT))
+    uvicorn.run(app, host=config.HOST, port=int(config.PORT))
